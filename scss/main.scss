@@ -1,0 +1,492 @@
+@import 'function';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam pro', sans-serif, Arial;
+    @include transition;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: url(/images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 135% -17%;
+}
+
+h1{
+    font-size: 3.5rem;
+    font-weight: map-get($font-weights , bold );
+    color: $primary-blue;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: map-get($font-weights, bold );
+}
+a:hover{
+    @include hover;
+}
+
+p{
+    opacity: .7;
+    margin: 1.5rem 0;  
+    line-height: 1.6rem;
+    font-size: .9rem;
+    font-weight: map-get($font-weights , bold );
+}
+button{
+    cursor: pointer;
+}
+button:hover{
+    @include hover;
+}
+
+.header{
+
+    &__nav{
+        @include flexbox;
+        align-items: center;
+        padding: 2rem 6rem;
+
+        #full-menu{
+            @include flexbox;
+
+            #closeMenu{
+                opacity: .6;
+                display: none;
+            }
+
+            a{
+                margin: 0 1rem;
+                color: $primary-blue;
+                font-weight: map-get($font-weights , bold );
+            }
+        }
+
+        .get-started{
+            display: inline-block;
+            @include get-started-btn;
+            font-weight: map-get($font-weights , bold );
+            color: white;
+        }
+
+        #hamburger{
+            display: none;
+        }
+    }
+}
+
+#intro{
+    display: flex;
+    padding: 2rem 6rem;
+
+    &__products{
+        margin: 4rem 2rem 0 0;
+        flex: 50%;
+
+        button{
+            @include get-started-btn;
+
+            a{
+                color: white;
+            }
+        }
+    }
+    &__work{
+        img{
+            height: auto;
+            width: 100%;
+        }
+    }
+}
+#manage{
+    padding: 2rem 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+
+    &__benefits{
+
+        h3{
+            @include benefits-cols-h3;
+        }
+        p{
+            margin: .5rem 0 .5rem 5rem;
+        }
+        
+        .col1{
+            h3{
+                &::before{  
+                    @include before; 
+                    content: '01';
+                }
+            }
+          
+        }
+        .col2{
+            h3{
+                &::before{
+                    @include before;
+                    content: '02';
+                }
+            }
+        }
+        .col3{
+            h3{
+                &::before{
+                    @include before;
+                    content: '03';
+                }
+            }
+        }
+    }
+}
+
+#testimony{
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+    background: url(/images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: -90% 135%;
+
+     h2{
+        font-size: 1.8rem;
+        margin: 1rem 0;
+     }
+
+     .testimonials{
+        display: flex;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+
+        .testifiers{
+            position: relative;
+            min-width: 25rem;
+            margin: 0 1.2rem;
+            margin-top: 5rem;
+            padding: 3.5rem 1.5rem .3rem 1.5rem;
+            background: $primary-grey;
+
+            img{
+                height: 80px;
+                position: absolute;
+                top: -40px;
+                display: flex;
+                left: 40%;
+            }
+
+            h4{
+                font-size: .9rem;
+            }
+        }
+     }
+     button{
+        @include get-started-btn;
+        margin: 3rem 0;
+
+        a{
+            color: white;
+        }
+     }
+}
+#simplify{
+    @include flexbox;
+    align-items: center;
+    background: $secondary-red;
+    padding: 4rem 6rem;
+    position: relative;
+    overflow: hidden;
+
+    h2{
+        font-size: 2rem;
+        color: white;
+        display: inline-block;
+        flex: 50%;
+        max-width: 40%;
+    }
+    button{
+        display: inline-block;
+        height: fit-content;
+        @include get-started-btn;
+        background: white;
+
+        a{
+            color: $secondary-red;
+        }
+    }
+    .sbg-img{
+    height: auto;
+    position: absolute;
+    width: 20%;
+    transform: rotate(45deg);
+    }
+}
+footer{
+    padding: 3rem 6rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background: $dark-blue;
+
+    .footer-nav1{
+        flex-direction: column;
+        @include flexbox;
+
+    .social-links{
+        display: flex;
+
+        li{
+            margin-right: 12px;
+            img{
+                height: 25px;
+            }
+        }
+    }
+}
+
+.about-us{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+       
+        a{
+            color: white;
+            margin: 10px 0;
+            display: inline-block;
+
+            &:hover{
+                color: $secondary-red;
+                opacity: 1;
+            }
+        }
+}
+
+.suscribe{
+    @include flexbox;
+    flex-direction: column;
+    text-align: right;
+
+    p{
+        color: white;
+        font-size: 1rem;
+    }
+    form{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+
+        input{
+            padding: .7rem 1.4rem;
+            color: $secondary-red;
+            border: none;
+            border-radius: 30px;
+            
+            &:focus{
+                outline: none;
+                border: none;
+            }
+        }
+
+        button{
+            color: white;
+            background: $secondary-red;
+            padding: .7rem 1rem;
+            border: none;
+            border-radius: 30px;
+        }
+    }
+}
+} 
+
+@media only screen and (max-device-width: 900px){
+    
+h1{
+    font-size: 2.3rem;
+}
+h2{
+    font-size: 1.8rem;
+}
+.header{
+    &__nav{
+        padding: 2rem 1.2rem;
+
+        .logo{
+            height: 17px;
+        }
+
+        #full-menu{
+            display: none;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            position: absolute;
+            height: 50vh;
+            width: 100%;
+            background: white;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+            display: none;
+            padding: 3rem;
+
+                a{
+                    color: $secondary-red;
+                    font-size: 1.1rem;
+                    margin: 2rem 0;
+                    display: block;
+                }
+
+            #closeMenu{
+                display: block;
+                height: 15px;
+                max-width: 15px;
+                margin-left: 90%;
+            }
+        }
+
+        .get-started{
+            display: none;
+        }
+
+        #hamburger{
+            display: block;
+        }
+    }
+
+}
+#intro{
+    flex-direction: column-reverse;
+    padding: 0rem;
+    text-align: center;
+
+    &__products{
+        margin: 1rem 1rem 1rem 1rem;
+    }
+}
+
+#manage{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 4rem 0 1rem 0rem;
+
+   &__difference{
+    text-align: center;
+    padding: 0 2rem;
+   }
+
+    &__benefits{
+        padding-left: 1rem;
+
+        h3{
+            background: $primary-red;
+            width: 100%;
+            font-size: .9rem;
+            &::before{
+                font-size: .8rem;
+            }
+        }
+        p{
+            margin:.5rem 0;
+        }
+    }
+}
+
+#testimony{
+
+    .testimonials{
+
+    .testifiers{
+        min-width: 21rem;
+        max-width: 22rem;
+    }
+
+}
+
+}
+
+#simplify{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 5rem 2rem;
+    text-align: center;
+
+    h2{
+        max-width: 100%;
+    }
+
+    button{
+        margin-top: 1.5rem;
+        width: fit-content;
+        display: block;
+        margin-left: 25%;
+    }
+ }
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem 2rem;
+    position: relative;
+
+    .footer-nav1{
+        flex-direction: column-reverse;
+        order: 3;
+        height: 8rem;
+        text-align: center;
+        margin-bottom: 5rem;
+
+        .social-links{
+            justify-content: space-between;
+
+            li{
+                
+            img{
+                height: 30px
+            }
+            }
+        }
+    }
+
+    .about-us{
+        @include flexbox;
+        margin: 2rem 0;
+        order: 2;
+    }
+    
+}
+
+.suscribe{
+    text-align: center;
+    order: 1;
+
+    p{
+        position: absolute;
+        margin: 2rem 0;
+        top: 80%;
+    }
+
+    form{
+        text-align: center;
+
+        button{
+            margin: .7rem;
+        }
+    }
+}
+}

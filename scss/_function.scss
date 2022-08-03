@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+$font-weights:(
+    "regular": 400,
+    "semibold": 500,
+    "bold": 600,
+    "heavy": 800
+);
+$primary-red:hsl(13, 100%, 96%);
+$secondary-red: hsl(12, 88%, 59%);
+$primary-blue: hsl(228, 39%, 23%);
+$dark-blue:hsl(233, 12%, 13%);
+$primary-grey: hsl(0, 0%, 98%);
+$secondary-grey:  hsl(227, 12%, 61%);
+$logo-height: 30px;
+$mobile-font-size: 14px;
+
+@mixin hover{
+    opacity: .8;
+}
+
+@mixin flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+@mixin transition{
+    transition: all .4s ease;
+}
+@mixin grid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+@mixin get-started-btn{
+    padding: .6rem 1.4rem;
+    font-size: .9rem;
+    border: none;
+    background: $secondary-red;
+    border-radius: 30px;
+    box-shadow: 0px 2px 7px $secondary-red ;
+    @include transition;
+}
+
+@mixin benefits-cols-h3{
+    font-size: clamp(10px , 1rem, 1rem);
+    display: inline-block;
+    padding: .5rem 0;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px ;
+}
+@mixin before{
+    color: white;
+    background: $secondary-red;
+    padding: .5rem 1.5rem;
+    margin-right: 12px;
+    font-size: 1rem;
+    border-radius: 30px;
+    display: inline;
+}

@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam pro", sans-serif, Arial;
+  transition: all 0.4s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url(/images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: 135% -17%;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: hsl(228deg, 39%, 23%);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+p {
+  opacity: 0.7;
+  margin: 1.5rem 0;
+  line-height: 1.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+}
+.header__nav #full-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.header__nav #full-menu #closeMenu {
+  opacity: 0.6;
+  display: none;
+}
+.header__nav #full-menu a {
+  margin: 0 1rem;
+  color: hsl(228deg, 39%, 23%);
+  font-weight: 600;
+}
+.header__nav .get-started {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  border: none;
+  background: hsl(12deg, 88%, 59%);
+  border-radius: 30px;
+  box-shadow: 0px 2px 7px hsl(12deg, 88%, 59%);
+  transition: all 0.4s ease;
+  font-weight: 600;
+  color: white;
+}
+.header__nav #hamburger {
+  display: none;
+}
+
+#intro {
+  display: flex;
+  padding: 2rem 6rem;
+}
+#intro__products {
+  margin: 4rem 2rem 0 0;
+  flex: 50%;
+}
+#intro__products button {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  border: none;
+  background: hsl(12deg, 88%, 59%);
+  border-radius: 30px;
+  box-shadow: 0px 2px 7px hsl(12deg, 88%, 59%);
+  transition: all 0.4s ease;
+}
+#intro__products button a {
+  color: white;
+}
+#intro__work img {
+  height: auto;
+  width: 100%;
+}
+
+#manage {
+  padding: 2rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+}
+#manage__benefits h3 {
+  font-size: clamp(10px, 1rem, 1rem);
+  display: inline-block;
+  padding: 0.5rem 0;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+#manage__benefits p {
+  margin: 0.5rem 0 0.5rem 5rem;
+}
+#manage__benefits .col1 h3::before {
+  color: white;
+  background: hsl(12deg, 88%, 59%);
+  padding: 0.5rem 1.5rem;
+  margin-right: 12px;
+  font-size: 1rem;
+  border-radius: 30px;
+  display: inline;
+  content: "01";
+}
+#manage__benefits .col2 h3::before {
+  color: white;
+  background: hsl(12deg, 88%, 59%);
+  padding: 0.5rem 1.5rem;
+  margin-right: 12px;
+  font-size: 1rem;
+  border-radius: 30px;
+  display: inline;
+  content: "02";
+}
+#manage__benefits .col3 h3::before {
+  color: white;
+  background: hsl(12deg, 88%, 59%);
+  padding: 0.5rem 1.5rem;
+  margin-right: 12px;
+  font-size: 1rem;
+  border-radius: 30px;
+  display: inline;
+  content: "03";
+}
+
+#testimony {
+  text-align: center;
+  padding: 2rem 0;
+  position: relative;
+  background: url(/images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-position: -90% 135%;
+}
+#testimony h2 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+#testimony .testimonials {
+  display: flex;
+  overflow-x: scroll;
+}
+#testimony .testimonials::-webkit-scrollbar {
+  display: none;
+}
+#testimony .testimonials .testifiers {
+  position: relative;
+  min-width: 25rem;
+  margin: 0 1.2rem;
+  margin-top: 5rem;
+  padding: 3.5rem 1.5rem 0.3rem 1.5rem;
+  background: hsl(0deg, 0%, 98%);
+}
+#testimony .testimonials .testifiers img {
+  height: 80px;
+  position: absolute;
+  top: -40px;
+  display: flex;
+  left: 40%;
+}
+#testimony .testimonials .testifiers h4 {
+  font-size: 0.9rem;
+}
+#testimony button {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  border: none;
+  background: hsl(12deg, 88%, 59%);
+  border-radius: 30px;
+  box-shadow: 0px 2px 7px hsl(12deg, 88%, 59%);
+  transition: all 0.4s ease;
+  margin: 3rem 0;
+}
+#testimony button a {
+  color: white;
+}
+
+#simplify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: hsl(12deg, 88%, 59%);
+  padding: 4rem 6rem;
+  position: relative;
+  overflow: hidden;
+}
+#simplify h2 {
+  font-size: 2rem;
+  color: white;
+  display: inline-block;
+  flex: 50%;
+  max-width: 40%;
+}
+#simplify button {
+  display: inline-block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  border: none;
+  background: hsl(12deg, 88%, 59%);
+  border-radius: 30px;
+  box-shadow: 0px 2px 7px hsl(12deg, 88%, 59%);
+  transition: all 0.4s ease;
+  background: white;
+}
+#simplify button a {
+  color: hsl(12deg, 88%, 59%);
+}
+#simplify .sbg-img {
+  height: auto;
+  position: absolute;
+  width: 20%;
+  transform: rotate(45deg);
+}
+
+footer {
+  padding: 3rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background: hsl(233deg, 12%, 13%);
+}
+footer .footer-nav1 {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-nav1 .social-links {
+  display: flex;
+}
+footer .footer-nav1 .social-links li {
+  margin-right: 12px;
+}
+footer .footer-nav1 .social-links li img {
+  height: 25px;
+}
+footer .about-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+footer .about-us a {
+  color: white;
+  margin: 10px 0;
+  display: inline-block;
+}
+footer .about-us a:hover {
+  color: hsl(12deg, 88%, 59%);
+  opacity: 1;
+}
+footer .suscribe {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: right;
+}
+footer .suscribe p {
+  color: white;
+  font-size: 1rem;
+}
+footer .suscribe form {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+footer .suscribe form input {
+  padding: 0.7rem 1.4rem;
+  color: hsl(12deg, 88%, 59%);
+  border: none;
+  border-radius: 30px;
+}
+footer .suscribe form input:focus {
+  outline: none;
+  border: none;
+}
+footer .suscribe form button {
+  color: white;
+  background: hsl(12deg, 88%, 59%);
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 30px;
+}
+
+@media only screen and (max-device-width: 900px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .header__nav {
+    padding: 2rem 1.2rem;
+  }
+  .header__nav .logo {
+    height: 17px;
+  }
+  .header__nav #full-menu {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    height: 50vh;
+    width: 100%;
+    background: white;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    display: none;
+    padding: 3rem;
+  }
+  .header__nav #full-menu a {
+    color: hsl(12deg, 88%, 59%);
+    font-size: 1.1rem;
+    margin: 2rem 0;
+    display: block;
+  }
+  .header__nav #full-menu #closeMenu {
+    display: block;
+    height: 15px;
+    max-width: 15px;
+    margin-left: 90%;
+  }
+  .header__nav .get-started {
+    display: none;
+  }
+  .header__nav #hamburger {
+    display: block;
+  }
+  #intro {
+    flex-direction: column-reverse;
+    padding: 0rem;
+    text-align: center;
+  }
+  #intro__products {
+    margin: 1rem 1rem 1rem 1rem;
+  }
+  #manage {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 4rem 0 1rem 0rem;
+  }
+  #manage__difference {
+    text-align: center;
+    padding: 0 2rem;
+  }
+  #manage__benefits {
+    padding-left: 1rem;
+  }
+  #manage__benefits h3 {
+    background: hsl(13deg, 100%, 96%);
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  #manage__benefits h3::before {
+    font-size: 0.8rem;
+  }
+  #manage__benefits p {
+    margin: 0.5rem 0;
+  }
+  #testimony .testimonials .testifiers {
+    min-width: 21rem;
+    max-width: 22rem;
+  }
+  #simplify {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  #simplify h2 {
+    max-width: 100%;
+  }
+  #simplify button {
+    margin-top: 1.5rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: block;
+    margin-left: 25%;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem 2rem;
+    position: relative;
+  }
+  footer .footer-nav1 {
+    flex-direction: column-reverse;
+    order: 3;
+    height: 8rem;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  footer .footer-nav1 .social-links {
+    justify-content: space-between;
+  }
+  footer .footer-nav1 .social-links li img {
+    height: 30px;
+  }
+  footer .about-us {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    order: 2;
+  }
+  .suscribe {
+    text-align: center;
+    order: 1;
+  }
+  .suscribe p {
+    position: absolute;
+    margin: 2rem 0;
+    top: 80%;
+  }
+  .suscribe form {
+    text-align: center;
+  }
+  .suscribe form button {
+    margin: 0.7rem;
+  }
+}/*# sourceMappingURL=main.css.map */
